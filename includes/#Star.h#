@@ -1,0 +1,6 @@
+//Star.h
+#ifndef STAR_H
+#define STAR_H
+#include "gradius.h"
+
+#endif
