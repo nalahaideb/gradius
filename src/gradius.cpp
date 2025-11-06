@@ -76,9 +76,6 @@ void test_image()
     delete [] starray;
 }
 
-//﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽
-//the testing will be good and the bugs destroyed inshallah
-//﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽﷽
 //************************************************************************************
 //overall state / wellness checks
 //does what it says on the tin
@@ -100,9 +97,7 @@ void runAliens()
 //maybe not so many bools for every obj
 void collisionCheck(std::vector < Entity * > &ent, Player * player)
 {
-    //this is bad. no bien. beat half to death with the ugly stick and ran over with the cringe car
-    //maybe i dont need this many bools after testing the laserray aganist the player, removing a bool actually fixed a lot down there
-    for (unsigned int i = 0; i < ent.size(); ++i)
+ for (unsigned int i = 0; i < ent.size(); ++i)
     {
         //if (player->STATE = INVULN) {break;}
         //this only checks for collisions between the player and the vector of entities (aliens)
@@ -183,10 +178,7 @@ void killCheck(std::vector < Entity * > &livingEntities)
         {
             //std::cout << "deleted an entity\n";
             livingEntities.erase(livingEntities.begin() + i--);
-            //dont ever uncomment this it will segfault, you can probably see why
-            // std::cout << "killed entity " << livingEntities[i]->entityID
-            //           << '\n' << livingEntities[i] << '\n';
-        }
+           }
     }
 }
 
@@ -194,10 +186,7 @@ void drawEntities(std::vector < Entity * > &livingEntities)
 {
     for (unsigned int i = 0; i < livingEntities.size(); ++i)
     {
-        //dumb temporary fix, but if it no longer segfaults is it really that dumb?
-        //perchance...
-        //std::cout << livingEntities.size() << '\n';
-        if (livingEntities[i]->isAlive && livingEntities[i]->entityID != FLEET)
+          if (livingEntities[i]->isAlive && livingEntities[i]->entityID != FLEET)
         {
             livingEntities[i]->draw();
         }
